@@ -65,6 +65,6 @@ async def upload_event_poster(event_id: str, file: UploadFile = File(...)):
 		"content_type": file.content_type,
 		"content": content,
 		"uploaded_at": datetime.utcnow()
-}
-result = await db.event_posters.insert_one(poster_doc)
-return {"message": "Event poster uploaded", "id": str(result.inserted_id)}
+	}
+	result = await db.event_posters.insert_one(poster_doc)
+	return {"message": "Event poster uploaded", "id": str(result.inserted_id)}
