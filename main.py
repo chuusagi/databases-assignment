@@ -14,7 +14,7 @@ load_dotenv()
 app = FastAPI()
 
 # Connect to MongoDB Atlas
-client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://db-assignment:123@assignment.1kucpmk.mongodb.net/")
+client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://database-assignment:123@cluster0.xxxxx.mongodb.net/event_management_db?retryWrites=true&w=majorityg")
 db = client.event_management_db
 
 # Data Models
